@@ -1,6 +1,7 @@
 import 'tailwindcss/tailwind.css'
 
 import { AppProps } from 'next/app'
+import Script from 'next/script'
 import { lazy } from 'react'
 
 export interface SharedPageProps {
@@ -17,6 +18,7 @@ export default function App({
   const { draftMode, token } = pageProps
   return (
     <>
+      <div id="fb-root"></div>
       {draftMode ? (
         <PreviewProvider token={token}>
           <Component {...pageProps} />

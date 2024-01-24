@@ -32,11 +32,6 @@ export default function IndexPage(props: IndexPageProps) {
       <Layout preview={preview} loading={loading}>
         <Container>
           <BlogHeader title={title} description={description} level={1} />
-          <div className="fb-page" data-href="https://www.facebook.com/lluitacalafell" data-lazy data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-            <blockquote cite="https://www.facebook.com/lluitacalafell" className="fb-xfbml-parse-ignore">
-              <a href="https://www.facebook.com/lluitacalafell">Club Esportiu Lluita Olímpica Calafell</a>
-            </blockquote>
-          </div>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -47,7 +42,7 @@ export default function IndexPage(props: IndexPageProps) {
               excerpt={heroPost.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <MoreStories posts={morePosts} />
         </Container>
       </Layout>
     </>

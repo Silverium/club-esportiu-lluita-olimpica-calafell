@@ -35,7 +35,8 @@
     "swr": "2.2.2"
   },
   "devDependencies": {
-    "@types/react": "18.2.22",
+    "@types/facebook-js-sdk": "^3.3.10",
+    "@types/react": "18.2.48",
     "@types/styled-components": "5.1.27",
     "autoprefixer": "10.4.15",
     "eslint": "8.49.0",

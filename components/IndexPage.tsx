@@ -7,7 +7,6 @@ import MoreStories from 'components/MoreStories'
 import * as demo from 'lib/demo.data'
 import type { Post, Settings } from 'lib/sanity.queries'
 import Script from 'next/script'
-import { useEffect } from 'react'
 
 export interface IndexPageProps {
   preview?: boolean
@@ -20,9 +19,6 @@ export default function IndexPage(props: IndexPageProps) {
   const { preview, loading, posts, settings } = props
   const [heroPost, ...morePosts] = posts || []
   const { title = demo.title, description = demo.description } = settings || {}
-  useEffect(() => {
-    window.FB?.XFBML.parse();
-  }, []);
 
 
   return (

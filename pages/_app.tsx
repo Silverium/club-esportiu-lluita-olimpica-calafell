@@ -1,8 +1,7 @@
 import 'tailwindcss/tailwind.css'
 
 import { AppProps } from 'next/app'
-import Script from 'next/script'
-import { lazy } from 'react'
+import { lazy, useEffect } from 'react'
 
 export interface SharedPageProps {
   draftMode: boolean
@@ -16,6 +15,9 @@ export default function App({
   pageProps,
 }: AppProps<SharedPageProps>) {
   const { draftMode, token } = pageProps
+  useEffect(() => {
+    window.FB?.XFBML.parse();
+  }, [Component]);
   return (
     <>
       <div id="fb-root"></div>

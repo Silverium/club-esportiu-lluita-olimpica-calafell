@@ -1,11 +1,7 @@
 import PostPreview from 'components/PostPreview'
 import type { Post } from 'lib/sanity.queries'
-import { useEffect } from 'react';
 
 export default function MoreStories({ posts }: { posts: Post[] }) {
-  useEffect(() => {
-    window.FB?.XFBML.parse();
-  }, []);
   return (
     <section>
       <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">

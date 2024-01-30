@@ -14,7 +14,7 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
     description = demo.description,
     ogImage = {},
   } = settings
-  const ogImageTitle = ogImage?.title || demo.ogImageTitle
+  const ogImageTitle = ogImage?.title || demo.ogImageTitle;  
 
   return (
     <Head>

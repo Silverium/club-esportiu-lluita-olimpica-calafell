@@ -28,7 +28,13 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
       <meta
         key="deployment-url"
         name="deployment-url"
-        content={process.env.VERCEL_URL || 'vercel-url-is-undefined'
+        content={process.env.VERCEL_URL || 'VERCEL_URL-is-undefined'
+        }
+      />
+      <meta
+        key="deployment-url"
+        name="deployment-url"
+        content={process.env.NEXT_PUBLIC_VERCEL_URL || 'NEXT_PUBLIC_VERCEL_URL-is-undefined'
         }
       />
       <meta

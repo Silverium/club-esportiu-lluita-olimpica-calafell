@@ -14,7 +14,7 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
     description = demo.description,
     ogImage = {},
   } = settings
-  const ogImageTitle = ogImage?.title || demo.ogImageTitle;  
+  const ogImageTitle = ogImage?.title || demo.ogImageTitle;
 
   return (
     <Head>
@@ -26,14 +26,19 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
         content={toPlainText(description)}
       />
       <meta
+        key="deployment-url"
+        name="deployment-url"
+        content={process.env.VERCEL_URL || 'vercel-url-is-undefined'
+        }
+      />
+      <meta
         property="og:image"
         // Because OG images must have a absolute URL, we use the
         // `VERCEL_URL` environment variable to get the deployment’s URL.
         // More info:
         // https://vercel.com/docs/concepts/projects/environment-variables
-        content={`${
-          process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
-        }/api/og?${new URLSearchParams({ title: ogImageTitle })}`}
+        content={`${process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
+          }/api/og?${new URLSearchParams({ title: ogImageTitle })}`}
       />
     </Head>
   )

@@ -37,7 +37,7 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
         // `VERCEL_URL` environment variable to get the deployment’s URL.
         // More info:
         // https://vercel.com/docs/concepts/projects/environment-variables
-        content={`${process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : process.env.NODE_ENV === 'production' ? 'https://club-esportiu-lluita-olimpica-calafell.vercel.app/' : ''
+        content={`${process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : process.env.NODE_ENV === 'production' ? 'https://club-esportiu-lluita-olimpica-calafell.vercel.app' : ''
           }/api/og?${new URLSearchParams({ title: ogImageTitle })}`}
       />
     </Head>

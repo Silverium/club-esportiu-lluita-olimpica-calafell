@@ -40,8 +40,7 @@ export default function BlogHeader({
 
     default:
       throw new Error(
-        `Invalid level: ${
-          JSON.stringify(level) || typeof level
+        `Invalid level: ${JSON.stringify(level) || typeof level
         }, only 1 or 2 are allowed`,
       )
   }

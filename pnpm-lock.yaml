@@ -43,7 +43,7 @@ dependencies:
     version: 13.5.1(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
   next-sanity:
     specifier: 5.5.4
-    version: 5.5.4(@sanity/client@6.4.12)(@sanity/icons@2.10.0)(@sanity/types@3.27.0)(@sanity/ui@1.9.3)(next@13.5.1)(react@18.2.0)(sanity@3.16.7)(styled-components@5.3.11)
+    version: 5.5.4(@sanity/client@6.4.12)(@sanity/icons@2.10.1)(@sanity/types@3.28.0)(@sanity/ui@1.9.3)(next@13.5.1)(react@18.2.0)(sanity@3.16.7)(styled-components@5.3.11)
   next-sanity-image:
     specifier: 6.1.0
     version: 6.1.0(@sanity/client@6.4.12)(next@13.5.1)(react@18.2.0)
@@ -107,8 +107,8 @@ devDependencies:
     specifier: 0.5.4
     version: 0.5.4(prettier@3.0.3)
   tailwindcss:
-    specifier: 3.3.3
-    version: 3.3.3
+    specifier: 3.4.1
+    version: 3.4.1
   typescript:
     specifier: 5.2.2
     version: 5.2.2
@@ -386,6 +386,20 @@ packages:
       '@lezer/common': 1.2.1
     dev: false
 
+  /@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.23.1)(@lezer/common@1.2.1):
+    resolution: {integrity: sha512-r4IjdYFthwbCQyvqnSlx0WBHRHi8nBvU+WjJxFUij81qsBfhNudf/XKKmmC2j3m0LaOYUQTf3qiEK1J8lO1sdg==}
+    peerDependencies:
+      '@codemirror/language': ^6.0.0
+      '@codemirror/state': ^6.0.0
+      '@codemirror/view': ^6.0.0
+      '@lezer/common': ^1.0.0
+    dependencies:
+      '@codemirror/language': 6.10.1
+      '@codemirror/state': 6.4.0
+      '@codemirror/view': 6.23.1
+      '@lezer/common': 1.2.1
+    dev: false
+
   /@codemirror/commands@6.3.3:
     resolution: {integrity: sha512-dO4hcF0fGT9tu1Pj1D2PvGvxjeGkbC6RGcZw6Qs74TH+Ed1gw98jmUgd2axWvIZEqTeTuFrg1lEB1KV6cK9h1A==}
     dependencies:
@@ -418,6 +432,17 @@ packages:
       style-mod: 4.1.0
     dev: false
 
+  /@codemirror/language@6.10.1:
+    resolution: {integrity: sha512-5GrXzrhq6k+gL5fjkAwt90nYDmjlzTIJV8THnxNFtNKWotMIlzzN+CpqxqwXOECnUdOndmSeWntVrVcv5axWRQ==}
+    dependencies:
+      '@codemirror/state': 6.4.0
+      '@codemirror/view': 6.23.1
+      '@lezer/common': 1.2.1
+      '@lezer/highlight': 1.2.0
+      '@lezer/lr': 1.4.0
+      style-mod: 4.1.0
+    dev: false
+
   /@codemirror/lint@6.5.0:
     resolution: {integrity: sha512-+5YyicIaaAZKU8K43IQi8TBy6mF6giGeWAH7N96Z5LC30Wm5JMjqxOYIE9mxwMG1NbhT2mA3l9hA4uuKUM3E5g==}
     dependencies:
@@ -434,6 +459,14 @@ packages:
       crelt: 1.0.6
     dev: false
 
+  /@codemirror/search@6.5.6:
+    resolution: {integrity: sha512-rpMgcsh7o0GuCDUXKPvww+muLA1pDJaFrpq/CCHtpQJYz8xopu4D1hPcKRoDD0YlF8gZaqTNIRa4VRBWyhyy7Q==}
+    dependencies:
+      '@codemirror/state': 6.4.0
+      '@codemirror/view': 6.23.1
+      crelt: 1.0.6
+    dev: false
+
   /@codemirror/state@6.4.0:
     resolution: {integrity: sha512-hm8XshYj5Fo30Bb922QX9hXB/bxOAVH+qaqHBzw5TKa72vOeslyGwd4X8M0c1dJ9JqxlaMceOQ8RsL9tC7gU0A==}
     dev: false
@@ -441,7 +474,7 @@ packages:
   /@codemirror/theme-one-dark@6.1.2:
     resolution: {integrity: sha512-F+sH0X16j/qFLMAfbciKTxVOwkdAS336b7AXTKOZhy8BR3eH/RelsnLgLFINrpST63mmN2OuwUt0W2ndUgYwUA==}
     dependencies:
-      '@codemirror/language': 6.10.0
+      '@codemirror/language': 6.10.1
       '@codemirror/state': 6.4.0
       '@codemirror/view': 6.23.1
       '@lezer/highlight': 1.2.0
@@ -1483,6 +1516,15 @@ packages:
       react: 18.2.0
     dev: false
 
+  /@sanity/icons@2.10.1(react@18.2.0):
+    resolution: {integrity: sha512-0IN4Gi7TpntMaxMhbJX5GzkP0+pylyVFcBc2aR8u/7EwSKHnAsjFpN2wQ99ipEA8k9zNZNQlq6R6pxFaHFYK5Q==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /@sanity/image-url@1.0.2:
     resolution: {integrity: sha512-C4+jb2ny3ZbMgEkLd7Z3C75DsxcTEoE+axXQJsQ75ou0AKWGdVsP351hqK6mJUUxn5HCSlu3vznoh7Yljye4cQ==}
     engines: {node: '>=10.0.0'}
@@ -1623,6 +1665,15 @@ packages:
 
   /@sanity/types@3.27.0:
     resolution: {integrity: sha512-Y8rqvPbX0i8xM+TkfvDJKSdAsN0oHTGs8e/n4fBqYwMsnYavVCyaG5GQKetsirI7H5sOJzJnjWPLCXCwz2QiTA==}
+    dependencies:
+      '@sanity/client': 6.12.3
+      '@types/react': 18.2.48
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@sanity/types@3.28.0:
+    resolution: {integrity: sha512-k3y7mD9QLN4PQVla5kkRKUu/JcEzByYhAAp8kFYRyZPBpJO3/BWZQVufWzbIfmyHrH5fu+O0XDP/MVATyYwoGQ==}
     dependencies:
       '@sanity/client': 6.12.3
       '@types/react': 18.2.48
@@ -2555,11 +2606,11 @@ packages:
   /codemirror@6.0.1(@lezer/common@1.2.1):
     resolution: {integrity: sha512-J8j+nZ+CdWmIeFIGXEFbFPtpiYacFMDR8GlHK3IyHQJMCaVRfGx9NT+Hxivv1ckLWPvNdZqndbr/7lVhrf/Svg==}
     dependencies:
-      '@codemirror/autocomplete': 6.12.0(@codemirror/language@6.10.0)(@codemirror/state@6.4.0)(@codemirror/view@6.23.1)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.23.1)(@lezer/common@1.2.1)
       '@codemirror/commands': 6.3.3
-      '@codemirror/language': 6.10.0
+      '@codemirror/language': 6.10.1
       '@codemirror/lint': 6.5.0
-      '@codemirror/search': 6.5.5
+      '@codemirror/search': 6.5.6
       '@codemirror/state': 6.4.0
       '@codemirror/view': 6.23.1
     transitivePeerDependencies:
@@ -5049,7 +5100,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /next-sanity@5.5.4(@sanity/client@6.4.12)(@sanity/icons@2.10.0)(@sanity/types@3.27.0)(@sanity/ui@1.9.3)(next@13.5.1)(react@18.2.0)(sanity@3.16.7)(styled-components@5.3.11):
+  /next-sanity@5.5.4(@sanity/client@6.4.12)(@sanity/icons@2.10.1)(@sanity/types@3.28.0)(@sanity/ui@1.9.3)(next@13.5.1)(react@18.2.0)(sanity@3.16.7)(styled-components@5.3.11):
     resolution: {integrity: sha512-hXpTbubgazoJO1cSb+OuGCtRbq7Fby/MYpZnU9IRoiPZS50UVz8lPWflFUfTq/j+pCerPpp31qDwCjY+Op6KcA==}
     engines: {node: '>=16.14'}
     peerDependencies:
@@ -5063,9 +5114,9 @@ packages:
       styled-components: ^5.2.0 || ^6.0.0
     dependencies:
       '@sanity/client': 6.4.12
-      '@sanity/icons': 2.10.0(react@18.2.0)
+      '@sanity/icons': 2.10.1(react@18.2.0)
       '@sanity/preview-kit': 3.1.6(@sanity/client@6.4.12)(react@18.2.0)
-      '@sanity/types': 3.27.0
+      '@sanity/types': 3.28.0
       '@sanity/ui': 1.9.3(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       '@sanity/webhook': 3.0.1
       groq: 3.27.0
@@ -6806,8 +6857,8 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /tailwindcss@3.3.3:
-    resolution: {integrity: sha512-A0KgSkef7eE4Mf+nKJ83i75TMyq8HqY3qmFIJSWy8bNt0v1lG7jUcpGpoTFxAwYcWOphcTBLPPJg+bDfhDf52w==}
+  /tailwindcss@3.4.1:
+    resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:

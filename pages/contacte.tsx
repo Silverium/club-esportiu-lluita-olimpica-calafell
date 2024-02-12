@@ -15,7 +15,7 @@ const style = "mapbox://styles/mapbox/streets-v9";
 const ContactePage: FC = () => {
     const [showPopup, setShowPopup] = useState<boolean>(false);
     return (
-        <div className="h-svh flex flex-col justify-center m-2 md:p-10 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
+        <div className="h-svh flex flex-col justify-around m-2 md:p-10 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
             <Head>
                 <title>Contacte | LLuita Olímpica Calafell</title>
                 <BlogMeta />

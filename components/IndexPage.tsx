@@ -3,7 +3,6 @@ import Layout from 'components/BlogLayout'
 import HeroPost from 'components/HeroPost'
 import IndexPageHead from 'components/IndexPageHead'
 import MoreStories from 'components/MoreStories'
-import * as demo from 'lib/demo.data'
 import type { Post, Settings } from 'lib/sanity.queries'
 import Script from 'next/script'
 
@@ -21,7 +20,6 @@ export default function IndexPage(props: IndexPageProps) {
 
   return (
     <>
-      <Script async defer crossOrigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v18.0&appId=926473622420128" nonce="URX4SzUB" />
       <IndexPageHead settings={settings} />
       <Layout preview={preview} loading={loading}>
         <Container>

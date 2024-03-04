@@ -20,17 +20,23 @@ const ContactePage: FC = () => {
                 <title>Contacte | LLuita Olímpica Calafell</title>
                 <BlogMeta />
             </Head>
-            <div>
+            <div className='flex flex-col gap-4'>
                 <div>
                     <h1 className='font-bold'>La lluita és un esport de contacte... contacta'ns!</h1>
                     <p>Club Esportiu Lluita Olímpica Calafell</p>
                     <p>Plaça Cosme Maine</p>
                     <p>43820 Calafell, Tarragona</p>
-                    <h2 className='font-bold'>Horari</h2>
-                    <p>Dimarts i dijous de 18:00 a 20:00</p>
-                    <p>Dilluns, dimecres i divendres de 19:00 a 20:00</p>
                 </div>
-                <span className='font-bold'>Email:</span> <a href="mailto:lluitaolimpicacalafell@gmail.com?subject=Informaci%C3%B3.%20%5Borigen%3A%20web%5D&body=Hola%20V%C3%ADctor%21%0A%0A">lluitaolimpicacalafell@gmail.com</a>
+                <div>
+                    <h2 className='font-bold'>Horari</h2>
+                    <p>De Dilluns a divendres de 18:00 a 20:30</p>
+                </div>
+                <div>
+                    <span className='font-bold'>Email:</span> <a href="mailto:lluitaolimpicacalafell@gmail.com?subject=Informaci%C3%B3.%20%5Borigen%3A%20web%5D&body=Hola%20V%C3%ADctor%21%0A%0A">lluitaolimpicacalafell@gmail.com</a>
+                </div>
+                <div>
+                    <span className='font-bold'>Telèfon:</span> <a href="tel:+34636557181">+34 636 557 181 (Víctor)</a> {/* Added telephone link */}
+                </div>
             </div>
             <div className="h-1/2 md:h-full w-full">
 

@@ -26,25 +26,23 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
         content={toPlainText(description)}
       />
       <meta
-        key="deployment-url"
-        name="deployment-url"
-        content={process.env.VERCEL_URL || 'VERCEL_URL-is-undefined'
-        }
-      />
-      <meta
-        key="public-deployment-url"
-        name="public-deployment-url"
-        content={process.env.NEXT_PUBLIC_VERCEL_URL || 'NEXT_PUBLIC_VERCEL_URL-is-undefined'
-        }
-      />
-      <meta
         property="og:image"
         // Because OG images must have a absolute URL, we use the
         // `VERCEL_URL` environment variable to get the deployment’s URL.
         // More info:
         // https://vercel.com/docs/concepts/projects/environment-variables
-        content={`${process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : process.env.NODE_ENV === 'production' ? 'https://club-esportiu-lluita-olimpica-calafell.vercel.app' : ''
+        content={`${process.env.NEXT_PUBLIC_VERCEL_URL ? 'https://' + process.env.NEXT_PUBLIC_VERCEL_URL : process.env.NODE_ENV === 'production' ? 'https://www.lluitacalafell.com' : ''
           }/api/og?${new URLSearchParams({ title: ogImageTitle })}`}
+      />
+      <meta
+        key="author"
+        name="author"
+        content="Soldeplata Saketos"
+      />
+      <meta
+        key="email"
+        name="email"
+        content="soldeplatadeveloper@gmail.com"
       />
     </Head>
   )

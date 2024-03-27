@@ -1,4 +1,3 @@
-import Script from "next/script";
 import { Organization, WithContext } from "schema-dts";
 const jsonLd: WithContext<Organization> = {
   "@context": "https://schema.org",
@@ -47,18 +46,19 @@ export default function BlogMeta() {
       <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/manifest.json" />
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-      <meta name="theme-color" content="#ffffff" />
-      <Script
-        id="faq-schema"
+      <script
+        id="organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLd),
         }}
-      />
+      >
+      </script>
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/manifest.json"></link>
+      <meta name="msapplication-TileColor" content="#ffffff"></meta>
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta>
+      <meta name="theme-color" content="#ffffff"></meta>
     </>
   )
 }

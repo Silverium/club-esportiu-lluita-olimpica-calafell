@@ -24,8 +24,18 @@ export default function App({
 
   return (
     <>
-      <Script async defer crossOrigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v18.0&appId=926473622420128" nonce="URX4SzUB" />
-
+      <Script async defer crossOrigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js" nonce="URX4SzUB" />
+      <Script id="facebook-async-init">
+        {`
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId            : '926473622420128',
+              xfbml            : true,
+              version          : 'v19.0'
+            });
+          };
+        `}
+      </Script>
       <NavigationBar />
       <div id="fb-root" />
       {draftMode ? (

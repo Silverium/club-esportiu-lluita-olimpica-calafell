@@ -3,6 +3,7 @@ import BlogMeta from 'components/BlogMeta'
 import * as demo from 'lib/demo.data'
 import { Settings } from 'lib/sanity.queries'
 import Head from 'next/head'
+import { usePathname } from 'next/navigation'
 
 export interface IndexPageHeadProps {
   settings: Settings
@@ -15,11 +16,11 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
     ogImage = {},
   } = settings
   const ogImageTitle = ogImage?.title || demo.ogImageTitle;
-
+const pathname = usePathname()
   return (
     <Head>
       <title>{title}</title>
-      <BlogMeta />
+      <BlogMeta path={pathname} />
       <meta
         key="description"
         name="description"
@@ -34,16 +35,7 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
         content={`${process.env.NEXT_PUBLIC_VERCEL_URL ? 'https://' + process.env.NEXT_PUBLIC_VERCEL_URL : process.env.NODE_ENV === 'production' ? 'https://www.lluitacalafell.com' : ''
           }/api/og?${new URLSearchParams({ title: ogImageTitle })}`}
       />
-      <meta
-        key="author"
-        name="author"
-        content="Soldeplata Saketos"
-      />
-      <meta
-        key="email"
-        name="email"
-        content="soldeplatadeveloper@gmail.com"
-      />
+
     </Head>
   )
 }

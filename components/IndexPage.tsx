@@ -4,7 +4,6 @@ import HeroPost from 'components/HeroPost'
 import IndexPageHead from 'components/IndexPageHead'
 import MoreStories from 'components/MoreStories'
 import type { Post, Settings } from 'lib/sanity.queries'
-import Script from 'next/script'
 
 export interface IndexPageProps {
   preview?: boolean

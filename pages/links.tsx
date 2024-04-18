@@ -8,7 +8,7 @@ export default function LinksPage() {
         <BlogContainer>
             <Head>
                 <title>Enllaços | LLuita Olímpica Calafell</title>
-                <BlogMeta />
+                <BlogMeta path="/links" />
             </Head>
             <h1 className="font-bold text-lg">Enllaços</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mx-4 my-6" >

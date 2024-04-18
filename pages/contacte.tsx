@@ -18,11 +18,11 @@ const ContactePage: FC = () => {
         <div className="h-svh flex flex-col justify-around m-2 md:p-10 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
             <Head>
                 <title>Contacte | LLuita Olímpica Calafell</title>
-                <BlogMeta />
+                <BlogMeta path='/contacte'/>
             </Head>
             <div className='flex flex-col gap-4'>
                 <div>
-                    <h1 className='font-bold'>La lluita és un esport de contacte... contacta'ns!</h1>
+                    <h1 className='font-bold'>La lluita és un esport de contacte... contacta&apos;ns!</h1>
                     <p>Club Esportiu Lluita Olímpica Calafell</p>
                     <p>Plaça Cosme Maine</p>
                     <p>43820 Calafell, Tarragona</p>

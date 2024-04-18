@@ -22,8 +22,8 @@ const defaultUrls: SitemapLocation[] = [
     priority: 1,
     lastmod: new Date(), // or custom date: '2023-06-12T00:00:00.000Z',
   },
-  //   { url: '/about', priority: 0.5 },
-  //   { url: '/blog', changefreq: 'weekly', priority: 0.7 },
+    { url: '/contacte', priority: 0.7 },
+    { url: '/links', changefreq: 'weekly', priority: 0.3 },
 ]
 
 const createSitemap = (locations: SitemapLocation[]) => {
